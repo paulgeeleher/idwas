@@ -1,0 +1,9 @@
+Package: idwas
+Title: idwas
+Version: 0.0.0.9000
+Authors@R: person("Paul", "Geeleher", email = "paulgeeleher@gmail.com", role = c("aut", "cre"))
+Description: The package is for running idwas. See Geeleher et al, Genome Research 2017 for details.
+Depends: R (>= 3.2.2)
+License: GPL
+Encoding: UTF-8
+LazyData: true
