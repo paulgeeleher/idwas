@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+\usepackage{placeins}
+\title{IDWAS User's guide}
+\author{Dr. Paul Geeleher}
+\begin{document}
+\maketitle
+
+This file will demonstrate a simple use case for the idwas R package. This package will allow one to preform an IDWAS using drug response imputations from the pRRophetic R package.
+
+First, load the library.
+<<>>=
+library(idwas)
+library(ggplot2)
+set.seed(12345)
+@
+
+
+\section{IDWAS on a subset of the GDSC data for a few drugs}
+<<>>=
+data("testIdwas") # clinicalExpressionData_tcga, clinicalGenomicsData_tcga, clinicalCoVariatesMatrix_tcga: This is a subset of the TCGA expression and genomics data.
+
+dataOut <- idwas(clinicalExpressionData_tcga, clinicalGenomicsData_tcga, clinicalCoVariatesMatrix_tcga, predictableDrugs=c("Nutlin.3a", "PD.0332991", "PD.0325901"))
+print(dataOut[1:10,])
+@
+\end{document}
+
+
+
+
+
