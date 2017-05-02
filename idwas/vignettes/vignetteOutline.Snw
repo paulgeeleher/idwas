@@ -11,6 +11,7 @@ First, load the library.
 <<>>=
 library(idwas)
 library(ggplot2)
+library(pRRophetic)
 set.seed(12345)
 @
 

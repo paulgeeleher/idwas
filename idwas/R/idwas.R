@@ -21,6 +21,11 @@
 #' @export
 idwas <- function(clinicalExpressionData, clinicalGenomicsData, clinicalCoVariatesMatrix=NULL, predictionLibrary="pRRophetic", predictionFunction="pRRopheticPredict", predictableDrugs=c("ABT.263", "ABT.888", "AG.014699", "AICAR", "ATRA", "Axitinib", "AZ628", "AZD.0530", "AZD.2281", "AZD6244", "AZD6482", "AZD7762", "BAY.61.3606", "BIBW2992", "Bicalutamide", "BI.D1870", "Bleomycin", "BMS.536924", "BMS.754807", "Bortezomib", "Bosutinib", "BX.795", "Camptothecin", "CEP.701", "CGP.082996", "CHIR.99021", "CI.1040", "Cisplatin", "Cytarabine", "Dasatinib", "DMOG", "Docetaxel", "Elesclomol", "Erlotinib", "FH535", "FTI.277", "Gefitinib", "Gemcitabine", "IPA.3", "Lapatinib", "Methotrexate", "MG.132", "Midostaurin", "Mitomycin.C", "Nilotinib", "Nutlin.3a", "NVP.BEZ235", "NVP.TAE684", "Obatoclax.Mesylate", "PAC.1", "PD.0325901", "PD.0332991", "PD.173074", "PLX4720", "RDEA119", "SB590885", "Sunitinib", "Temsirolimus", "Thapsigargin", "Tipifarnib", "TW.37", "Vinblastine", "Vorinostat", "VX.702", "WH.4.023", "WO2009093972", "WZ.1.84", "X17.AAG", "X681640", "XMD8.85", "ZM.447439"), ...)
 {
+
+  # a poor workaround because I'm having problems seeing this data from idwas. Need to come up with a better solution to this.
+  library(pRRophetic)
+  data(drugAndPhenoCgp)
+
   # check if both row and column names have been specified
   if(is.null(rownames(clinicalExpressionData)) || is.null(rownames(clinicalExpressionData)) || is.null(rownames(clinicalGenomicsData)) || is.null(rownames(clinicalGenomicsData)))
   {
